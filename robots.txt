@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# curiouser and curiouser...
+Disallow: /wonderland
+Disallow: /rabbit-hole
