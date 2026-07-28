@@ -314,8 +314,8 @@
     margin-right: 6px; vertical-align: middle;
     animation: pulse 1.6s ease-in-out infinite;
   }
-  .term-body { padding: 16px 18px; min-height: 280px; }
-  .term-line { white-space: pre; }
+  .term-body { padding: 16px 18px; min-height: 280px; overflow-x: hidden; }
+  .term-line { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
   .term-prompt { color: var(--accent); }
   .term-user { color: var(--fg-dim); }
   .term-dim { color: var(--fg-mute); }
@@ -1203,7 +1203,7 @@
     color: var(--fg-mute); letter-spacing: 0.08em;
     padding: 6px 0 0; text-transform: uppercase;
   }
-  pre.term-pre { margin: 0; font-family: var(--mono); font-size: inherit; line-height: 1.5; color: var(--accent); }
+  pre.term-pre { margin: 0; font-family: var(--mono); font-size: inherit; line-height: 1.5; color: var(--accent); max-width: 100%; overflow-x: auto; }
 
   /* ---------- wonderland mode ---------- */
   body.wonderland {
@@ -1248,6 +1248,9 @@
     .proj-arrow { display: none; }
     .section-head { grid-template-columns: auto 1fr; }
     .section-meta { display: none; }
+    .terminal { font-size: 11px; }
+    .term-body { padding: 12px 13px; min-height: 220px; }
+    .dossier-body { gap: 16px; padding: 18px 14px; }
   }
 </style>
 </head>
